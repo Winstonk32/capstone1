@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Dashboard</title>
+    <link rel="stylesheet" href="fin.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Personal Finance Dashboard</h1>
+    </header>
+    
+    <main>
+        <section class="overview">
+            <div class="card">
+                <h2>Total Income</h2>
+                <p id="total-income">$0</p>
+            </div>
+            <div class="card">
+                <h2>Total Expenses</h2>
+                <p id="total-expenses">$0</p>
+            </div>
+            <div class="card">
+                <h2>Balance</h2>
+                <p id="balance">$0</p>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>Add a Transaction</h2>
+            <form id="transaction-form">
+                <input type="number" id="amount" placeholder="Amount" required>
+                <select id="type">
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+                <input type="text" id="category" placeholder="Category" required>
+                <button type="submit">Add Transaction</button>
+            </form>
+        </section>
+
+        <section class="transaction-history">
+            <h2>Transaction History</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Amount</th>
+                        <th>Type</th>
+                        <th>Category</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="transaction-list"></tbody>
+            </table>
+        </section>
+
+        <section class="chart-section">
+            <h2>Expenses Breakdown</h2>
+            <canvas id="expense-chart"></canvas>
+        </section>
+    </main>
+
+    <script src="fin.js"></script>
+</body>
+</html>

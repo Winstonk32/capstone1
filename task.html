@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="task.css">
+</head>
+<body>
+ 
+         <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="home.html">Winston's Finance Blog</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Finance</a>
+                        <div class="dropdown-content">
+                            <a href="expense.html">Expense Manager</a>
+                            <a href="task.html">Saving Manager</a>
+                            <a href="calculators.html">Calculators</a>
+                        </div>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+      <h1>Saving Manager</h1>
+      <p>Organize your Savingd and track your progress</p>
+  
+    <section class="add-task">
+      <h2>Add New Saving Goal</h2>
+      <form id="taskForm">
+        <input type="text" id="taskTitle" placeholder="Save title" required>
+        <textarea id="taskDescription" placeholder="Save description" required></textarea>
+        <input type="date" id="taskDueDate" required>
+        <select id="taskPriority">
+          <option value="low">Low Priority</option>
+          <option value="medium">Medium Priority</option>
+          <option value="high">High Priority</option>
+        </select>
+        <button type="submit">Add Task</button>
+      </form>
+    </section>
+
+    <section class="task-list">
+      <h2>Goals</h2>
+      <div id="progressContainer">
+        <span id="progressText">0% Complete</span>
+        <div id="progressBar">
+          <div id="progressFill"></div>
+        </div>
+      </div>
+      <div id="taskContainer">
+        <!-- Tasks will be dynamically added here -->
+      </div>
+    </section>
+  </div>
+
+  <script src="task.js"></script>
+</body>
+</html>
