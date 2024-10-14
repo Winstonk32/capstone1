@@ -19,9 +19,9 @@ function calculateFutureValue(initialInvestment, monthlyContribution, annualInte
     const monthlyInterestRate = annualInterestRate / 12;
     let futureValue = initialInvestment;
 
-    for (let i = 1; i <= months; i++) {
-        futureValue += monthlyContribution;
-        futureValue *= (1 + monthlyInterestRate);
+    for (let i = 1; i <= months; i++) {  //a loop that iterates over all 12 months
+        futureValue += monthlyContribution; //Adds the monthly contribution to the current future value for each month.
+        futureValue *= (1 + monthlyInterestRate); //Applies the compound interest by multiplying the future value by the growth factor (1 plus the monthly interest rate).
     }
 
     return futureValue;
